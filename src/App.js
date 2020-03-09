@@ -1,10 +1,11 @@
 import React from 'react';
 import HomePage from '../src/pages/HomePage'
+import './style.scss';
 
 
 function App() {
   return (
-    <div>
+    <div className='main-body'>
       <HomePage />
     </div>
   );

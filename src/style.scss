@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-body {
+    min-height: 100vh;
+    background-color: #ffff99;
+    font-size: 14px;
+}
+
+.container {
+    width: 96%;
+    margin: 0 auto;
+
+    .search-form {
+        padding-top: 20px;
+        
+        form {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 70%;
+                height: 1.5em;
+            }
+        
+            button {
+                margin-left: 20px;
+            }
+        }
+
+        .books {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .box-book {
+                display:flex;
+                flex-direction: column;
+                width: 95%;
+                cursor: pointer;
+                margin: 0 auto 20px auto;
+                background-color: rgba(0,0,0,0.1);
+                               
+                .book-image {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                    border: 1px solid grey; 
+
+                    img {
+                        min-height: 190px;
+                    }
+                }
+
+                .book-info {
+                    margin: 0 15px 15px 10px;
+
+                    h1 {
+                        font-size: 1.5em;
+                        font-weight: 700;
+                        padding-bottom: 5px;
+                    }
+
+                    h2 {
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            .books {
+                justify-content: space-between;
+
+                .box-book {
+                    flex-direction: row;
+                    width: 46%;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                                   
+                    .book-image {  
+                        width: 50%;
+                        padding: 0;
+                    }
+    
+                    .book-info {
+                        width: 50%;
+                        margin: 0;
+                        padding-left: 10px;
+    
+                        h1 {
+                            padding: 15px 0 15px 0;
+                        }
+                    }
+                }    
+            }
+        }
+        @media (min-width: 1024px) {
+            .books {
+                .box-book {
+                    width: 32%;
+
+                    .book-image {  
+                        width: 50%;
+                    }
+                }     
+            }
+        }
+    }  
+}

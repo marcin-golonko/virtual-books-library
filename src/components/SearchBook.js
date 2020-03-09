@@ -16,7 +16,7 @@ class SearchBook extends React.Component {
     getBooks = (event) => {
         event.preventDefault();
         //console.log(this.state.inputValue)
-        let api = 'https://www.googleapis.com/books/v1/volumes?q=' + this.state.inputValue +':keyes&maxResults=40';
+        let api = 'https://www.googleapis.com/books/v1/volumes?q=' + this.state.inputValue +':keyes&maxResults=4';
         //console.log(api);
         axios
             .get(api)
@@ -33,9 +33,9 @@ class SearchBook extends React.Component {
      } 
 
     render(){
-        const books = this.props.books;
+        //const books = this.props.books;
         return (
-            <div>
+            <div className="search-form">
                 <form onSubmit= {this.getBooks}>
                     <input onChange= {this.onInputChange} value= {this.state.inputValue} placeholder="Wpisz tytuł ksiązki"/>
                     <button type="submit">Wyszukaj</button>
